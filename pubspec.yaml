@@ -19,6 +19,8 @@ dependencies:
   flutter_screenutil: ^5.9.3
   velocity_x: ^4.0.0
 
+  modal_progress_hud_nsn: ^0.5.1
+
   flutter_bloc: ^8.1.6
   bloc: ^8.1.4
   dio: ^5.5.0+1

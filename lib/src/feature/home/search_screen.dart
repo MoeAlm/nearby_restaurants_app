@@ -9,7 +9,7 @@ import '../../core/models/restaurant_model.dart';
 
 class SearchScreen extends StatelessWidget {
   final List<Restaurant> result;
-   SearchScreen({super.key, required this.result});
+   const SearchScreen({super.key, required this.result});
 
   @override
   Widget build(BuildContext context) {
@@ -17,8 +17,6 @@ class SearchScreen extends StatelessWidget {
     return   Scaffold(
       appBar: AppBar(),
       body: GridView.builder(
-        shrinkWrap: true,
-        physics: const NeverScrollableScrollPhysics(),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: Responsive.isDesktop(context) ? 4 : 2,
           mainAxisSpacing: 12,
@@ -41,7 +39,7 @@ class SearchScreen extends StatelessWidget {
             restaurantCard(theme, model: result[index]),
           );
         },
-      ).px12(),
+      ).p12(),
     );
   }
 }

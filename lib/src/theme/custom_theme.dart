@@ -61,8 +61,8 @@ class CustomTheme {
         ),
       ),
       searchBarTheme: const SearchBarThemeData(
-        elevation: MaterialStatePropertyAll(0.0),
-        textStyle: MaterialStatePropertyAll(
+        elevation: WidgetStatePropertyAll(0.0),
+        textStyle: WidgetStatePropertyAll(
           TextStyle(color: Colors.grey),
         ),
       ),

@@ -11,6 +11,13 @@ class RestaurantCubit extends Cubit<RestaurantState> {
 
   static RestaurantCubit get(context) => BlocProvider.of(context);
 
+  bool isLoading = false;
+
+  void changeState() {
+    isLoading = !isLoading;
+    emit(ChangeState());
+  }
+
   Future<List<Restaurant>> fetchNearbyRestaurants(
       double userLat, double userLng) async {
     final response = await ApiHelper().getApi(
@@ -39,7 +46,7 @@ class RestaurantCubit extends Cubit<RestaurantState> {
 
       return restaurants;
     } catch (e) {
-      throw e;
+      rethrow;
     }
   }
 
@@ -87,7 +94,7 @@ class RestaurantCubit extends Cubit<RestaurantState> {
         throw Exception('Failed to search restaurants');
       }
     } catch (e) {
-      throw e;
+      rethrow;
     }
   }
 }
