@@ -53,7 +53,7 @@ class HomeScreen extends StatelessWidget {
                 builder: (context, snapshot) {
                   if (snapshot.hasData) {
                     return ListView(
-                      padding: const EdgeInsets.symmetric(horizontal: 12),
+                      padding: const EdgeInsets.all(12),
                       children: [
                         SizedBox(
                           height: 100.h,
