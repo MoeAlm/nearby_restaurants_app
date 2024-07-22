@@ -60,15 +60,19 @@ class HomeScreen extends StatelessWidget {
                                 vertical: 15, horizontal: 10),
                             suffixIcon: Icon(CupertinoIcons.search),
                             hintText: "ابحث عن اسم المطعم من هنا"),
-                        onSubmitted: (value) => cubit
-                            .searchRestaurants(value)
-                            .then((value) {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) {
-                            return SearchScreen(result: value);
-                          }));
-                          return null;
-                        }),
+                        onSubmitted: (query) {
+                          cubit.searchRestaurants(query).then((value) {
+                            value.forEach((element) {
+                              print('Name: ${element.name}');
+                              print('Address: ${element.address}');
+                            });
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                              return SearchScreen(result: value);
+                            }));
+                            return null;
+                          });
+                        },
                       ),
                       Text(
                         'المطاعم القريبة منك',

@@ -58,7 +58,7 @@ class Restaurant {
 
     return Restaurant(
       name: json['name'],
-      address: truncateAddress(json['vicinity']),
+      address: truncateAddress(json['vicinity'] ?? ''),
       latitude: json['geometry']['location']['lat'],
       longitude: json['geometry']['location']['lng'],
       photoUrl: getPhotoUrl(),

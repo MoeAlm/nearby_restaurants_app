@@ -36,10 +36,7 @@ class RestaurantCubit extends Cubit<RestaurantState> {
         position.latitude,
         position.longitude,
       );
-      restaurants.forEach((element) {
-        print('Name: ${element.name}');
-        print('Address: ${element.address}');
-      });
+
       return restaurants;
     } catch (e) {
       throw e;
