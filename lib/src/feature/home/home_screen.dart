@@ -67,8 +67,6 @@ class HomeScreen extends StatelessWidget {
                           onSubmitted: (query) {
                             cubit.changeState();
                             cubit.searchRestaurants(query).then((value) {
-                              for (var element in value) {
-                              }
                               Navigator.push(context,
                                   MaterialPageRoute(builder: (context) {
                                 return SearchScreen(result: value);
