@@ -85,15 +85,15 @@ class CustomTheme {
       inputDecorationTheme: InputDecorationTheme(
         focusedBorder: OutlineInputBorder(
           borderSide: const BorderSide(color: Palette.primaryColor),
-          borderRadius: BorderRadius.circular(kRadius),
+          borderRadius: BorderRadius.circular(kRadius / 1.5),
         ),
         enabledBorder: OutlineInputBorder(
           borderSide: const BorderSide(color: Palette.primaryColorShade300),
-          borderRadius: BorderRadius.circular(kRadius),
+          borderRadius: BorderRadius.circular(kRadius/ 1.5),
         ),
         border: OutlineInputBorder(
           borderSide: const BorderSide(color: Palette.primaryColorShade300),
-          borderRadius: BorderRadius.circular(kRadius),
+          borderRadius: BorderRadius.circular(kRadius/ 1.5),
         ),
         labelStyle: const TextStyle(color: Palette.black700),
         hintStyle: const TextStyle(color: Palette.black700),

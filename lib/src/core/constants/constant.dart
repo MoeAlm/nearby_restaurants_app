@@ -1,6 +1,5 @@
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-final kRadius = 20.0.r;
+const kRadius = 20.0;
 
 const baseUrl = 'https://maps.googleapis.com/maps/api';
 
