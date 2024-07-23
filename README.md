@@ -37,7 +37,7 @@ This project is part of a job application for Speetar Health, showcasing the use
    cd nearby_restaurants_app
    flutter pub get
 2. **Add the Google API Key**
-- Open `lib/src/constants/constants.dart`.
+- Open `lib/src/core/constants/constant.dart`.
 - Replace the placeholder with your actual API key:
 
    ```dart
