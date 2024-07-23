@@ -36,3 +36,17 @@ This project is part of a job application for Speetar Health, showcasing the use
    git clone https://github.com/MoeAlm/nearby_restaurants_app.git
    cd nearby_restaurants_app
    flutter pub get
+2. **Add the Google API Key**
+- Open `lib/src/constants/constants.dart`.
+- Replace the placeholder with your actual API key:
+
+   ```dart
+   const googleApiKey = 'YOUR_GOOGLE_API_KEY';
+
+3. **Run the App**
+- In Android Studio, ensure the emulator is running.
+- Open the terminal and navigate to the project directory.
+- Run the following command::
+
+   ```bash
+   flutter run
